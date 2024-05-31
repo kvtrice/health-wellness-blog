@@ -31,7 +31,7 @@ hr {
 
 button {
     width: fit-content;
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 50px;
     transition: 200ms;
     border: none;
@@ -47,5 +47,4 @@ button:hover {
 button a {
     text-decoration: none;
     color: black;
-
 }
