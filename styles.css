@@ -1,0 +1,97 @@
+/* Font Import */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Style Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styling */
+
+html {
+    font-family: "Inter", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Header */
+
+header {
+    margin: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-elements {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu li {
+    padding: 0 1rem;
+}
+
+.dark-mode {
+    padding-right: 4rem;
+}
+
+/* Footer */
+
+.carousel {
+    display: flex;
+    height: 250px;
+    overflow: scroll;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel img {
+    border-radius: 10px;
+    margin: 2rem 0.5rem;
+}
+
+.main-footer {
+    padding-top: 2rem;
+}
+
+.footer-elements {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-menu ul {
+    text-align: right;
+}
+
+.footer-menu ul li {
+    padding: 0.2rem 0;
+}
+
+.copyright {
+    margin: 2rem;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    font-size: 14px;
+}
