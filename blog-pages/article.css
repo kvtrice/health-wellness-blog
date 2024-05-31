@@ -1,0 +1,51 @@
+section {
+    max-width: 700px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+section img {
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.posted-date {
+    margin-top: 10px;
+    font-size: 12px;
+    color: gray
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 1px;
+    background-color: lightgray;
+    border: none;
+}
+
+.article-text {
+    margin-bottom: 50px;
+    line-height: 1.4;
+}
+
+button {
+    width: fit-content;
+    padding: 8px;
+    margin-bottom: 50px;
+    transition: 200ms;
+    border: none;
+    background-color: antiquewhite;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+
+}

@@ -19,9 +19,13 @@ li {
     list-style: none;
 }
 
-li a {
+li a, h1 a {
     text-decoration: none;
     color: black;
+}
+
+li a:hover {
+    text-decoration: underline;
 }
 
 /* Header */
