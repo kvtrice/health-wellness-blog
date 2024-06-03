@@ -7,7 +7,7 @@ section {
 
 section img {
     margin: 20px 0;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .posted-date {
@@ -29,7 +29,7 @@ hr {
     line-height: 1.4;
 }
 
-button {
+.view-more {
     width: fit-content;
     padding: 10px;
     margin-bottom: 50px;

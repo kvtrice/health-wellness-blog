@@ -11,8 +11,31 @@
 
 /* Global Styling */
 
+:root {
+    --primary-bg: white;
+    --primary-text: rgb(72, 66, 66);
+    --dark-mode-button-bg: rgb(37, 23, 4);
+    --dark-mode-button-text:rgb(246, 244, 232);
+    --box-shadow-color: rgba(0, 0, 0, 0.2);
+    --container-color: rgb(255, 255, 255);
+    --carousel-color: antiquewhite;
+}
+
+[data-theme="dark"] {
+    --primary-bg: rgb(37, 23, 4);
+    --primary-text: rgb(246, 244, 232);
+    --dark-mode-button-bg: antiqueWhite;
+    --dark-mode-button-text: rgb(72, 66, 66);
+    --box-shadow-color: rgba(28, 28, 28, 0.2);
+    --container-color: rgb(71, 69, 69);
+    --carousel-color: rgb(71, 69, 69);
+}
+
 html {
     font-family: "Inter", sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    transition: 300ms;
 }
 
 li {
@@ -21,11 +44,25 @@ li {
 
 li a, h1 a {
     text-decoration: none;
-    color: black;
+    color: var(--primary-text);
 }
 
 li a:hover {
     text-decoration: underline;
+}
+
+#darkModeToggle {
+    background-color: var(--dark-mode-button-bg);
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: var(--dark-mode-button-text);
+    transition: 300ms;
+}
+
+#darkModeToggle:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 /* Header */
@@ -37,6 +74,7 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .nav-elements {
@@ -46,6 +84,7 @@ nav {
 
 .nav-menu {
     display: flex;
+    align-items: center;
 }
 
 .nav-menu li {
@@ -67,20 +106,25 @@ nav {
     }
 }
 
+footer {
+    background-color: var(--carousel-color);
+}
+
 .carousel {
     width: 100%;
-    height: 250px;
+    height: 350px;
     overflow: hidden;
     white-space: nowrap;
+    background: var(--carousel-color);
 }
 
 .carousel-container {
     display: inline-block;
-    animation: horizontal-scroll 30s linear infinite;
+    animation: horizontal-scroll 50s linear infinite;
 }
 
 .carousel img {
-    height: 200px;
+    height: 300px;
     border-radius: 10px;
     margin: 20px 10px;
 }
@@ -92,20 +136,27 @@ nav {
 .footer-elements {
     margin: 2rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .footer-menu ul {
-    text-align: right;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .footer-menu ul li {
-    padding: 0.2rem 0;
+    padding: 5px 15px;
 }
 
 .copyright {
-    margin: 2rem;
-    padding-top: 80px;
     padding-bottom: 30px;
-    font-size: 14px;
+    font-size: 12px;
+    text-align: center;
 }

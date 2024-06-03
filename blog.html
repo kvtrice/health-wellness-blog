@@ -6,6 +6,7 @@
         <title>Blog</title>
         <link rel="stylesheet" href="./blog.css">
         <link rel="stylesheet" href="./styles.css">
+        <script src="./index.js" defer></script>
     </head>
     <body>
         <!-- Header -->
@@ -18,7 +19,9 @@
                 <div class="nav-elements">
                     <!-- Dark Mode Toggle -->
                     <div class="dark-mode">
-                        <input type="checkbox" name="dark-mode" id="darkMode">
+                        <button type="button" name="dark-mode-toggle" id="darkModeToggle" onclick="toggleDarkMode()" >
+                            Dark Mode
+                        </button>
                     </div>
                     <!-- Menu Items -->
                     <ul class="nav-menu">
@@ -44,7 +47,7 @@
                     <h3>Article Sleep</h3>
                     <p>Brief article description / overview</p>
                     <button>
-                        <a href="blog-pages/article-sleep.html">Read Now</a>
+                        <a href="blog-pages/article-sleep.html">Read Now →</a>
                     </button>
                 </article>
                 <article>
@@ -52,7 +55,7 @@
                     <h3>Article Title</h3>
                     <p>Brief article description / overview</p>
                     <button>
-                        <a href="#">Read Now</a>
+                        <a href="#">Read Now →</a>
                     </button>
                 </article>
                 <article>
@@ -60,7 +63,7 @@
                     <h3>Article Title</h3>
                     <p>Brief article description / overview</p>
                     <button>
-                        <a href="#">Read Now</a>
+                        <a href="#">Read Now →</a>
                     </button>
                 </article>
                 <article>
@@ -68,7 +71,7 @@
                     <h3>Article Title</h3>
                     <p>Brief article description / overview</p>
                     <button>
-                        <a href="#">Read Now</a>
+                        <a href="#">Read Now →</a>
                     </button>
                 </article>
                 <article>
@@ -76,7 +79,7 @@
                     <h3>Article Title</h3>
                     <p>Brief article description / overview</p>
                     <button>
-                        <a href="#">Read Now</a>
+                        <a href="#">Read Now →</a>
                     </button>
                 </article>
                 <article>
@@ -84,15 +87,30 @@
                     <h3>Article Title</h3>
                     <p>Brief article description / overview</p>
                     <button>
-                        <a href="#">Read Now</a>
+                        <a href="#">Read Now →</a>
                     </button>
                 </article>
             </div>
         </section>
 
-        <!-- Footer -->
+       <!-- Footer -->
         <footer>
-            <!-- Scrolling Image Carousel -->
+            <!-- Main Footer -->
+            <div class="main-footer">
+                <div class="footer-elements">
+                    <div class="logo">
+                        <h2><span class="logo-accent">Glow</span> Up</h2>
+                    </div>
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./tracker.html">Sleep Tracker</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+             <!-- Scrolling Image Carousel -->
             <div class="carousel">
                 <div class="carousel-container">
                     <img src="./images/blog-images/carousel-images/board-games.jpg" alt="A game of chess">
@@ -126,26 +144,9 @@
                     <img src="./images/blog-images/carousel-images/yoga.jpg" alt="Yoga">
                 </div>
             </div>
-            
-            <!-- Main Footer -->
-            <div class="main-footer">
-                <div class="footer-elements">
-                    <div class="logo">
-                        <h2><span class="logo-accent">Glow</span> Up</h2>
-                    </div>
-                    <div class="footer-menu">
-                        <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./blog.html">Sleep Tracker</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="copyright">
-                    <p>Copyright Glow Up 2024. All rights reserved.</p>
-                </div>
+            <div class="copyright">
+                <p>Copyright Glow Up 2024. All rights reserved.</p>
             </div>
         </footer>
-        
     </body>
 </html>
