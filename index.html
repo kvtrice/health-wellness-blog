@@ -89,13 +89,13 @@
 
         <!-- Newsletter Sign Up Section -->
         <section>
-            <div class="newsletter-signup">
+            <div class="newsletter-signup" id="newsletter">
                 <div class="newsletter-text">
                     <h2>Join our Newsletter</h2>
                     <p>Simply enter your email to stay up to date <br>on all things Health and Wellness ✨</p>
                 </div>
                 <div class="newsletter-form">
-                    <form onsubmit="">
+                    <form onsubmit="signUp(event)">
                         <label for="email"></label>
                         <input type="email" name="email" id="email" placeholder="Enter your email here">
                         <button>Submit</button>

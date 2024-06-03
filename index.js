@@ -17,4 +17,12 @@ const setStoredTheme = () => {
     toggleButton.innerText = storedTheme === 'dark' ? "Light Mode" : "Dark Mode";
 }
 
+// Load the theme that's been stored in LocalStorage on page load
 document.addEventListener('DOMContentLoaded', setStoredTheme);
+
+const signUp = (e) => { 
+    e.preventDefault();
+
+    const newsletterContainer = document.getElementById("newsletter")
+    newsletterContainer.innerText = "Thank you for entering your email, you're now successfully subscribed to our mailing list! 🎉"
+}
