@@ -13,22 +13,26 @@
 
 :root {
     --primary-bg: white;
+    --secondary-bg: antiquewhite;
     --primary-text: rgb(72, 66, 66);
     --dark-mode-button-bg: rgb(37, 23, 4);
     --dark-mode-button-text:rgb(246, 244, 232);
     --box-shadow-color: rgba(0, 0, 0, 0.2);
     --container-color: rgb(255, 255, 255);
-    --carousel-color: antiquewhite;
+    --border-color: rgb(37, 23, 4);
+    --published-date-color: gray;
 }
 
 [data-theme="dark"] {
     --primary-bg: rgb(37, 23, 4);
+    --secondary-bg: rgb(71, 69, 69);
     --primary-text: rgb(246, 244, 232);
     --dark-mode-button-bg: antiqueWhite;
     --dark-mode-button-text: rgb(72, 66, 66);
     --box-shadow-color: rgba(28, 28, 28, 0.2);
     --container-color: rgb(71, 69, 69);
-    --carousel-color: rgb(71, 69, 69);
+    --border-color: antiquewhite;
+    --published-date-color: rgb(212, 212, 212);
 }
 
 html {
@@ -68,10 +72,13 @@ li a:hover {
 /* Header */
 
 header {
-    margin: 2rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
 nav {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 1.5rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,7 +114,8 @@ nav {
 }
 
 footer {
-    background-color: var(--carousel-color);
+    background-color: var(--secondary-bg);
+    border-top: 1px solid var(--border-color);
 }
 
 .carousel {
@@ -115,7 +123,6 @@ footer {
     height: 350px;
     overflow: hidden;
     white-space: nowrap;
-    background: var(--carousel-color);
 }
 
 .carousel-container {
@@ -140,7 +147,7 @@ footer {
     justify-content: center;
 }
 
-.logo {
+footer .logo {
     text-align: center;
     margin-bottom: 20px;
 }

@@ -10,10 +10,14 @@ section img {
     border-radius: 10px;
 }
 
+section h1 {
+    line-height: 1.4;
+}
+
 .posted-date {
     margin-top: 10px;
     font-size: 12px;
-    color: gray
+    color: var(--published-date-color)
 }
 
 hr {
@@ -31,13 +35,16 @@ hr {
 
 .view-more {
     width: fit-content;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 50px;
     transition: 200ms;
     border: none;
     background-color: antiquewhite;
     border-radius: 3px;
     cursor: pointer;
+    font-size: 15px;
+    margin: 0 auto;
+    margin-bottom: 50px;
 }
 
 button:hover {
@@ -46,5 +53,5 @@ button:hover {
 
 button a {
     text-decoration: none;
-    color: black;
+    color: black;   
 }
