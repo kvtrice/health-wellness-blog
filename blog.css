@@ -1,4 +1,4 @@
-section {
+.blog-section {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
@@ -62,12 +62,12 @@ article button {
     text-align: left;
 }
 
-button a {
+article button a {
     display: inline-block;
     color: var(--primary-text);
     margin-bottom: 5px;
 }
 
-button a:hover {
+article button a:hover {
     font-weight: 700;
 }

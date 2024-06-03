@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Glow Up</title>
         <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./blog.css">
         <script src="./index.js" defer></script>
     </head>
     <body>
@@ -40,18 +41,67 @@
 
         <!-- Hero Section -->
         <section>
-            <!-- Try Sleep Tracker Button -->
-
+            <div class="hero">
+                <h1>Welcome to Glow Up</h1>
+                <p>Where we're glowing up our lives every day with fresh health and wellness tips. <br>Get started right here with our new Mood-Sleep Tracker!</p>
+                <button><a href="./tracker.html">Try the Mood-Sleep Tracker</a></button>
+            </div>
         </section>
 
         <!-- View Blog Posts Section -->
-        <section>
-
+        <section class="blog-section">
+            <h1>Recent Blog Posts</h1>
+            <div class="articles-container">
+                <article>
+                    <div>
+                        <img src="./images/article-images/article-sleep.jpg" alt="Alarm Clock in bed">
+                        <h3>The Power of Sleep: How Quality Rest Boosts Your Mood and Health</h3>
+                        <p>Explore the crucial role of sleep in enhancing mood and overall health. Discover tips for achieving better rest each night.</p>
+                    </div>
+                    <button>
+                        <a href="blog-pages/article-sleep.html">Read Now →</a>
+                    </button>
+                </article>
+                <article>
+                    <div>
+                        <img src="./images/article-images/article-fun-active.jpg" alt="Handstand at Beach">
+                        <h3>10 Fun Ways to Stay Active and Healthy</h3>
+                        <p>Staying Active and Healthy doesn't have to be hard. Get some fun ideas on hoe to up your fitness!</p>
+                    </div>
+                    <button>
+                        <a href="./blog-pages/article-active.html">Read Now →</a>
+                    </button>
+                </article>
+                <article>
+                    <div>
+                        <img src="./images/article-images/article-healthy-eating.jpg" alt="Family preparing Healthy Food">
+                        <h3>Healthy Eating that Works For You</h3>
+                        <p>Dive into some practical advice on incorporating nutritious foods into your diet.</p>
+                    </div>
+                    <button>
+                        <a href="./blog-pages/article-healthy.html">Read Now →</a>
+                    </button>
+                </article> 
+            </div>
+            <button class="view-all"><a href="./blog.html">View all articles</a></button>
         </section>
+
 
         <!-- Newsletter Sign Up Section -->
         <section>
-
+            <div class="newsletter-signup">
+                <div class="newsletter-text">
+                    <h2>Join our Newsletter</h2>
+                    <p>Simply enter your email to stay up to date <br>on all things Health and Wellness ✨</p>
+                </div>
+                <div class="newsletter-form">
+                    <form onsubmit="">
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email here">
+                        <button>Submit</button>
+                    </form>
+                </div>
+            </div>
         </section>
 
         <!-- Footer -->

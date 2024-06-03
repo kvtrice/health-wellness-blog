@@ -13,26 +13,32 @@
 
 :root {
     --primary-bg: white;
-    --secondary-bg: antiquewhite;
+    --secondary-bg: #faebd7;
     --primary-text: rgb(72, 66, 66);
-    --dark-mode-button-bg: rgb(37, 23, 4);
-    --dark-mode-button-text:rgb(246, 244, 232);
+    --placeholder-text: rgb(123, 121, 121);
+    --button-bg: rgb(37, 23, 4);
+    --button-text: antiqueWhite;
     --box-shadow-color: rgba(0, 0, 0, 0.2);
     --container-color: rgb(255, 255, 255);
     --border-color: rgb(37, 23, 4);
     --published-date-color: gray;
+    --gradient: linear-gradient(to right bottom, #faebd7, #fbe1cb, #fcd7c0, #feccb8, #ffc1b3);
+    --email-newsletter-bg: rgb(255, 255, 255);
 }
 
 [data-theme="dark"] {
     --primary-bg: rgb(37, 23, 4);
     --secondary-bg: rgb(71, 69, 69);
     --primary-text: rgb(246, 244, 232);
-    --dark-mode-button-bg: antiqueWhite;
-    --dark-mode-button-text: rgb(72, 66, 66);
+    --placeholder-text: rgb(221, 219, 208);
+    --button-bg: antiqueWhite;
+    --button-text: rgb(72, 66, 66);
     --box-shadow-color: rgba(28, 28, 28, 0.2);
     --container-color: rgb(71, 69, 69);
     --border-color: antiquewhite;
     --published-date-color: rgb(212, 212, 212);
+    --gradient: linear-gradient(to right bottom, #474444, #463838, #442d2b, #40221e, #3b170f);
+    --email-newsletter-bg: rgb(89, 86, 86);
 }
 
 html {
@@ -40,6 +46,16 @@ html {
     background-color: var(--primary-bg);
     color: var(--primary-text);
     transition: 300ms;
+}
+
+button {
+    cursor: pointer;
+    transition: 300ms;
+}
+
+button a {
+    text-decoration: none;
+    color: var(--button-text)
 }
 
 li {
@@ -56,11 +72,11 @@ li a:hover {
 }
 
 #darkModeToggle {
-    background-color: var(--dark-mode-button-bg);
+    background-color: var(--button-bg);
     padding: 5px 10px;
     border: 1px solid transparent;
     border-radius: 3px;
-    color: var(--dark-mode-button-text);
+    color: var(--button-text);
     transition: 300ms;
 }
 
@@ -166,4 +182,128 @@ footer .logo {
     padding-bottom: 30px;
     font-size: 12px;
     text-align: center;
+}
+
+/* Hero Section */
+
+.hero {
+    height: 60vh;
+    background-image: url("./images/hero.jpg"), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero h1,
+.hero p {
+    color: antiquewhite;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 80px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.hero button {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: antiquewhite;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+.hero button a {
+    color: rgb(37, 23, 4);
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+}
+
+
+/* Recent Blog Posts Section */
+
+.view-all {
+    width: fit-content;
+    padding: 15px;
+    margin-bottom: 50px;
+    transition: 200ms;
+    border: none;
+    background-color: var(--button-bg);
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.view-all:hover {
+    transform: scale(1.05);
+}
+
+/* Newsletter Signup Section */
+
+.newsletter-signup {
+    max-width: 900px;
+    margin: 50px auto;
+    display: flex;
+    border-radius: 10px;
+    padding: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--gradient);
+}
+
+.newsletter-text {
+    margin-right: 50px;
+    max-width: 40%;
+    line-height: 1.4;
+}
+
+.newsletter-text h2 {
+    margin-bottom: 10px;
+}
+
+.newsletter-text p {
+    font-style: italic;
+}
+
+.newsletter-form form input {
+    width: 400px;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: var(--email-newsletter-bg);
+}
+
+.newsletter-form form input::placeholder {
+    color: var(--placeholder-text);
+}
+
+.newsletter-form form button {
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    margin-left: 10px;
+}
+
+.newsletter-form form button:hover {
+    transform: scale(1.05);
 }
