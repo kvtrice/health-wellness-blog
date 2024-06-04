@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sleep Tracker</title>
+        <title>Mood and Sleep Tracker</title>
         <link rel="stylesheet" href="./styles.css">
         <link rel="stylesheet" href="./tracker.css">
         <script src="./index.js" defer></script>
         <script src="./tracker.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     </head>
     <body>
         <!-- Header -->
@@ -52,26 +53,29 @@
             <div class="tracker">
                 <h2>How was your mood today?</h2>
                 <div class="mood-chips" id="moodChips">
-                    <button class="chip" data-value="1">Pretty poor</button>
-                    <button class="chip" data-value="2">Not the best</button>
-                    <button class="chip" data-value="3">I'm okay</button>
-                    <button class="chip" data-value="4">Pretty good</button>
-                    <button class="chip" data-value="5">I feel amazing!</button>
+                    <button class="chip" data-value="1">1 - Pretty poor</button>
+                    <button class="chip" data-value="2">2 - Not the best</button>
+                    <button class="chip" data-value="3">3 - I'm okay</button>
+                    <button class="chip" data-value="4">4 - Pretty good</button>
+                    <button class="chip" data-value="5">5 - I feel amazing!</button>
                 </div>
                 <h2>How was your sleep quality last night?</h2>
                 <div class="sleep-chips" id="sleepChips">
-                    <button class="chip" data-value="1">Terrible</button>
-                    <button class="chip" data-value="2">Bad</button>
-                    <button class="chip" data-value="3">Neutral</button>
-                    <button class="chip" data-value="4">Good</button>
-                    <button class="chip" data-value="5">Great</button>
+                    <button class="chip" data-value="1">1 - Terrible</button>
+                    <button class="chip" data-value="2">2 - Bad</button>
+                    <button class="chip" data-value="3">3 - Neutral</button>
+                    <button class="chip" data-value="4">4 - Good</button>
+                    <button class="chip" data-value="5">5 - Great</button>
                 </div>
                 <div class="buttons">
                     <button class="clear" id="clear">Clear</button>
                     <button class="submit" id="submit">Submit</button>
                 </div>
             </div>
-            
+            <div class="chart-container">
+                <canvas id="tracker" width="600" height="300"></canvas>
+                <button class="delete-data" id="deleteData">Delete Data</button>
+            </div>
         </section>
 
         <!-- Footer -->
