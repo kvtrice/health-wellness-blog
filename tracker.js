@@ -60,6 +60,9 @@ const moodSleepTracker = () => {
     })
 }
 
+// Hide chart if there is no data yet
+
+
 const updateChart = () => {
     const ctx = document.getElementById('tracker');
     
@@ -67,6 +70,14 @@ const updateChart = () => {
     const moodData = storedData.map(entry => entry.mood);
     const sleepData = storedData.map(entry => entry.sleep);
 
+    const chartContainer = document.getElementById('chartContainer');
+    
+    if (storedData.length === 0) {
+        chartContainer.style.display = 'none';
+        return;
+    } else {
+        chartContainer.style.display = 'block';
+    }
     // Create an array of number values for the # of entries stored
     let labels = [0];
     for (let i = 1; i <= storedData.length; i++) {
@@ -79,13 +90,17 @@ const updateChart = () => {
             label: 'Mood',
             data: [0, ...moodData],
             borderColor: 'rgba(75, 192, 192, 1)',
+            backgroundColor: 'rgba(75, 192, 192, 1)',
             borderWidth: 2,
+            tension: 0.4,
         },
-            {
+        {
             label: 'Sleep Quality',
             data: [0, ...sleepData],
             borderColor: 'rgba(153, 102, 255, 1)',
+            backgroundColor: 'rgba(153, 102, 255, 1)',
             borderWidth: 2,
+            tension: 0.4,
         }]
     };
 
@@ -93,11 +108,40 @@ const updateChart = () => {
         type: 'line',
         data: data,
         options: {
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom',
+                    labels: {
+                        font: {
+                            size: 14,
+                            family: 'Inter',
+                        },
+                        boxWidth: 20,
+                        boxHeight: 20,
+                        useBorderRadius: true,
+                        borderRadius: 5,
+                        color: '#000000',
+                    }
+                }
+            },
             scales: {
                 y: {
                     ticks: {
                         max: 5,
-                        stepSize: 1
+                        stepSize: 1,
+                        color: '#000000',
+                    },
+                    grid: {
+                        display: false
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: '#000000',
+                    },
+                    grid: {
+                        display: false,
                     }
                 }
             }
@@ -118,7 +162,8 @@ const saveEntry = (entry) => {
 }
 
 const deleteStoredDataButton = document.getElementById('deleteData');
+
 deleteStoredDataButton.addEventListener('click', () => { 
         localStorage.removeItem('moodSleepData');
         updateChart();
-    })
+})

@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mood and Sleep Tracker</title>
-        <link rel="stylesheet" href="./styles.css">
         <link rel="stylesheet" href="./tracker.css">
+        <link rel="stylesheet" href="./styles.css">
         <script src="./index.js" defer></script>
         <script src="./tracker.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
@@ -44,7 +44,7 @@
         <!-- Mood Sleep Tracker -->
         <section>
             <div>
-                <h1>Mood-Sleep Tracker</h1>
+                <h1 class="heading">Mood-Sleep Tracker</h1>
                 <p>Studies show that quality sleep plays a critical role in maintaining mental and emotional well-being. When we sleep well, our bodies undergo restorative processes that regulate mood, improve cognitive function, and reduce stress. On the flip side, poor sleep can lead to increased irritability, anxiety, and even depression. 
                 <br><br> 
                 By using our Mood and Sleep Tracker, you can gain some useful insights into how your sleep quality impacts your mood over time. Tracking this data helps you identify patterns and make informed adjustments to your sleep habits, ultimately enhancing your overall mental health and well-being!</p>
@@ -68,13 +68,13 @@
                     <button class="chip" data-value="5">5 - Great</button>
                 </div>
                 <div class="buttons">
-                    <button class="clear" id="clear">Clear</button>
+                    <button class="clear" id="clear">Clear Selections</button>
                     <button class="submit" id="submit">Submit</button>
                 </div>
             </div>
-            <div class="chart-container">
+            <div id="chartContainer">
                 <canvas id="tracker" width="600" height="300"></canvas>
-                <button class="delete-data" id="deleteData">Delete Data</button>
+                <button class="delete-data" id="deleteData">Delete Chart Data</button>
             </div>
         </section>
 

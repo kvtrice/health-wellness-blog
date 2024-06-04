@@ -7,12 +7,12 @@ section {
     max-width: 900px;
 }
 
-h1 {
+.heading {
     text-align: center;
     margin-bottom: 20px;
 }
 
-h2 {
+.tracker h2 {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 15px;
@@ -37,6 +37,7 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .mood-chips {
@@ -82,7 +83,8 @@ hr {
 }
 
 .submit,
-.clear {
+.clear, 
+.delete-data {
     width: fit-content;
     padding: 10px 15px;
     transition: 200ms;
@@ -95,15 +97,36 @@ hr {
     margin-top: 30px;
 }
 
-.clear {
+.clear,
+.delete-data {
     background-color: transparent;
     border: 1px solid var(--primary-text);
     color: var(--primary-text);
+}
+
+.clear {
     margin-right: 10px;
 }
 
+
 .chip:hover, 
 .submit:hover,
-.clear:hover {
+.clear:hover,
+.delete-data:hover {
     transform: scale(1.05);
+}
+
+#chartContainer {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
 }

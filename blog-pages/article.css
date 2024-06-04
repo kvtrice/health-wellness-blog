@@ -39,6 +39,7 @@ hr {
     margin-bottom: 50px;
     transition: 200ms;
     border: none;
+    color: var(--button-text);
     background-color: var(--button-bg);
     border-radius: 3px;
     cursor: pointer;
