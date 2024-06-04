@@ -1,0 +1,109 @@
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 900px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+p {
+    padding: 0 2rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+hr {
+    width: 300px;
+    height: 1px;
+    background-color: lightgray;
+    border: none;
+    margin: 50px 0;
+}
+
+.tracker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mood-chips {
+    margin-bottom: 2rem;
+}
+
+.chip {
+    padding: 8px 12px;
+    border-radius: 50px;
+    margin: 2px;
+    border: 1px solid transparent;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.chip:active,
+.chip.selected {
+    background-color: black;
+    color: antiquewhite;
+    border: 1px solid antiquewhite;
+}
+
+[data-value="1"] {
+    background-color: rgb(255, 203, 203);
+}
+
+[data-value="2"] {
+    background-color: rgb(255, 225, 198);
+}
+
+[data-value="3"] {
+    background-color: rgb(255, 246, 203);
+}
+
+[data-value="4"] {
+    background-color: rgb(221, 255, 171);
+}
+
+[data-value="5"] {
+    background-color: rgb(172, 243, 173);
+}
+
+.submit,
+.clear {
+    width: fit-content;
+    padding: 10px 15px;
+    transition: 200ms;
+    border: 1px solid antiquewhite;
+    background-color: antiquewhite;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+.clear {
+    background-color: transparent;
+    border: 1px solid var(--primary-text);
+    color: var(--primary-text);
+    margin-right: 10px;
+}
+
+.chip:hover, 
+.submit:hover,
+.clear:hover {
+    transform: scale(1.05);
+}

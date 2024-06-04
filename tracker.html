@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sleep Tracker</title>
         <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./tracker.css">
         <script src="./index.js" defer></script>
+        <script src="./tracker.js" defer></script>
     </head>
     <body>
         <!-- Header -->
@@ -38,9 +40,58 @@
             </nav>
         </header>
 
+        <!-- Mood Sleep Tracker -->
+        <section>
+            <div>
+                <h1>Mood-Sleep Tracker</h1>
+                <p>Studies show that quality sleep plays a critical role in maintaining mental and emotional well-being. When we sleep well, our bodies undergo restorative processes that regulate mood, improve cognitive function, and reduce stress. On the flip side, poor sleep can lead to increased irritability, anxiety, and even depression. 
+                <br><br> 
+                By using our Mood and Sleep Tracker, you can gain some useful insights into how your sleep quality impacts your mood over time. Tracking this data helps you identify patterns and make informed adjustments to your sleep habits, ultimately enhancing your overall mental health and well-being!</p>
+            </div>
+            <hr>
+            <div class="tracker">
+                <h2>How was your mood today?</h2>
+                <div class="mood-chips" id="moodChips">
+                    <button class="chip" data-value="1">Pretty poor</button>
+                    <button class="chip" data-value="2">Not the best</button>
+                    <button class="chip" data-value="3">I'm okay</button>
+                    <button class="chip" data-value="4">Pretty good</button>
+                    <button class="chip" data-value="5">I feel amazing!</button>
+                </div>
+                <h2>How was your sleep quality last night?</h2>
+                <div class="sleep-chips" id="sleepChips">
+                    <button class="chip" data-value="1">Terrible</button>
+                    <button class="chip" data-value="2">Bad</button>
+                    <button class="chip" data-value="3">Neutral</button>
+                    <button class="chip" data-value="4">Good</button>
+                    <button class="chip" data-value="5">Great</button>
+                </div>
+                <div class="buttons">
+                    <button class="clear" id="clear">Clear</button>
+                    <button class="submit" id="submit">Submit</button>
+                </div>
+            </div>
+            
+        </section>
+
         <!-- Footer -->
         <footer>
-            <!-- Scrolling Image Carousel -->
+            <!-- Main Footer -->
+            <div class="main-footer">
+                <div class="footer-elements">
+                    <div class="logo">
+                        <h2><span class="logo-accent">Glow</span> Up</h2>
+                    </div>
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./tracker.html">Sleep Tracker</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+             <!-- Scrolling Image Carousel -->
             <div class="carousel">
                 <div class="carousel-container">
                     <img src="./images/carousel-images/board-games.jpg" alt="A game of chess">
@@ -74,23 +125,8 @@
                     <img src="./images/carousel-images/yoga.jpg" alt="Yoga">
                 </div>
             </div>
-            <!-- Main Footer -->
-            <div class="main-footer">
-                <div class="footer-elements">
-                    <div class="logo">
-                        <h2><span class="logo-accent">Glow</span> Up</h2>
-                    </div>
-                    <div class="footer-menu">
-                        <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./blog.html">Sleep Tracker</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="copyright">
-                    <p>Copyright Glow Up 2024. All rights reserved.</p>
-                </div>
+            <div class="copyright">
+                <p>Copyright Glow Up 2024. All rights reserved.</p>
             </div>
         </footer>
     </body>

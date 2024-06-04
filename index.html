@@ -32,7 +32,7 @@
                             <a href="./blog.html">Blog</a>
                         </li>
                         <li>
-                            <a href="./blog.html">Sleep Tracker</a>
+                            <a href="./tracker.html">Sleep Tracker</a>
                         </li>
                     </ul>
                 </div>
@@ -44,7 +44,7 @@
             <div class="hero">
                 <h1>Welcome to Glow Up</h1>
                 <p>Where we're glowing up our lives every day with fresh health and wellness tips. <br>Get started right here with our new Mood-Sleep Tracker!</p>
-                <button><a href="./tracker.html">Try the Mood-Sleep Tracker</a></button>
+                <a href="./tracker.html"><button>Try the Mood-Sleep Tracker</button></a>
             </div>
         </section>
 
@@ -83,7 +83,9 @@
                     </button>
                 </article> 
             </div>
-            <button class="view-all"><a href="./blog.html">View all articles</a></button>
+            <a href="./blog.html">
+                <button class="view-all">View all articles</button>
+            </a>
         </section>
 
 
@@ -97,9 +99,12 @@
                 <div class="newsletter-form">
                     <form onsubmit="signUp(event)">
                         <label for="email"></label>
-                        <input type="email" name="email" id="email" placeholder="Enter your email here">
+                        <input type="email" name="email" id="email" placeholder="Enter your email here" onfocus="clearError()">
                         <button>Submit</button>
                     </form>
+                    <p id="error">
+
+                    </p>
                 </div>
             </div>
         </section>

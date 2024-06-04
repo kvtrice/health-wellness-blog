@@ -23,6 +23,19 @@ document.addEventListener('DOMContentLoaded', setStoredTheme);
 const signUp = (e) => { 
     e.preventDefault();
 
-    const newsletterContainer = document.getElementById("newsletter")
-    newsletterContainer.innerText = "Thank you for entering your email, you're now successfully subscribed to our mailing list! 🎉"
+    const emailInput = document.getElementById("email");
+    const inputValue = emailInput.value
+
+    if (inputValue) {
+        const newsletterContainer = document.getElementById("newsletter")
+        newsletterContainer.innerText = "Thank you for entering your email, you're now successfully subscribed to our mailing list! 🎉"
+    } else {
+        const errorContainer = document.getElementById("error")
+        errorContainer.innerText = "Please enter your email address"
+    }
+}
+
+const clearError = () => { 
+    const errorContainer = document.getElementById("error")
+    errorContainer.innerText = "";
 }
